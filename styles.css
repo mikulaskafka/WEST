@@ -1,0 +1,247 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .download_button {
+    font-size: 16px;
+    font-weight: 200; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #BE965A;
+    background-color: black;
+    color: white;
+    transition: border-color 0.3s, font-size 0.3s; /* Add transition for smooth effect */
+    cursor: pointer; /* Change cursor to pointer */
+    display: inline-block; /* Display button as inline-block */
+    margin-top: 20px;
+    width: 300px;
+    padding: 30px 25px; /* Increase padding for top and bottom */
+  }
+
+
+.download_button:hover {
+  color: #8e7344;
+}
+
+.download_button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#contact_section {
+    padding: 50px 20px;
+}
+  
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666; /* Semi-dark text color */
+}
+  
+input[type="text"],
+input[type="email"],
+input[type="datetime-local"],
+button[type="submit"] {
+    width: 70%; /* Set width to 30% */
+    padding: 15px; /* Increase padding for top and bottom */
+    border: 1px solid #ccc; /* Light border color */
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 75%; /* Set width to 70% minus twice the padding (15px on each side) */
+    padding: 15px; /* Keep padding for top and bottom */
+    border: 2px solid #BE965A;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: border-color 0.3s, font-size 0.3s;
+    border-radius: none;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    color: #8e7344;
+}
+
+#reservation{
+    margin-left: 3%;
+}
+
+/*Styling main section*/
+
+.main_header_style {
+    font-size: 40px;
+    font-family: 'Century Gothic';
+}
+
+#coupon_description {
+    font-size: 18px;
+}
+
+.coupon_description p {
+    line-height: 1.5; /* Adjust the value to increase or decrease spacing between lines */
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Century Gothic', sans-serif; /* Set all heading elements to Century Gothic */
+  }
+
+  /* Make h1 not bold */
+h1 {
+    font-weight: normal;
+  }
+
+
+  #coupon {
+    display: flex;
+  }
+  
+  
+  #coupon_left {
+    width: 50%;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    overflow: hidden; /* Hide overflow content */
+  }
+
+  #coupon_left img:first-child {
+    position: absolute; /* Position the logo absolutely */
+    top: 5%; 
+    left: 3%; /* Position it at the left of the container */
+    width: 15%; /* Adjust the width as needed */
+    z-index: 1; /* Ensure the logo appears above other content */
+  }
+
+  
+  
+  #main_image {
+    width: 100%;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+  }
+  
+  
+  #coupon_right {
+    width: 50%;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    padding: 0 20px;
+    overflow: hidden; /* Hide overflow content */
+    font-weight: 200;
+  }
+
+  .coupon_description {
+    margin-left: 7%;
+    margin-top: 20%;
+  }
+
+  #coupon_right .navbar {
+    text-align: right; /* Align navbar to the right */
+    margin-top: 20px; /* Add margin to the top */
+  }
+  
+  #coupon_right .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+  }
+  
+  #coupon_right .navbar ul li {
+    display: inline-block; /* Display list items as inline-block */
+    margin-left: 20px; /* Add left margin for spacing between items */
+  }
+  
+  #coupon_right .navbar ul li:first-child {
+    margin-left: 0; /* Remove left margin from the first item */
+  }
+  
+  #coupon_right .navbar ul li a {
+    text-decoration: none; /* Remove underlining */
+    color: white; /* Set text color to white */
+    transition: color 0.3s; /* Add transition for smooth color change */
+    cursor: pointer; /* Change cursor to pointer */
+    letter-spacing: 1.5px; /* Add letter spacing */
+  }
+  
+  #coupon_right .navbar ul li a:hover {
+    color: #BE965A; /* Change color on hover to #BE965A */
+  }
+  
+  #coupon_right .main_header_style {
+    text-align: left; /* Align header text to the left */
+    margin-bottom: 20px;
+  }
+  
+  #coupon_right p {
+    text-align: left; /* Align paragraph text to the left */
+    max-width: 80%; /* Set maximum width for the paragraph */
+    word-wrap: break-word;
+  }
+  
+
+/*Contact Section*/ 
+
+#contact_section {
+    padding: 50px 20px;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space the elements evenly */
+    align-items: flex-start; /* Align the elements to the top */
+    padding-bottom: 30vh; /* Add padding to the bottom of the contact section */
+}
+
+
+
+#reservation,
+#contact {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top; /* Align them to the top */
+}
+
+#contact {
+    text-align: center; /* Center align content */
+}
+
+#address, #schedule {
+    width: 45%; /* Each element takes up 45% of container width */
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+#schedule {
+    margin-left: 10px; /* Add margin between address and schedule */
+}
+
+#address p,
+#schedule p {
+    text-align: left;
+}
+
+.contact_font {
+    text-align: left;
+}
+
+#socials {
+    text-align: center; /* Center align the social icons */
+    margin-top: 20px; /* Add some space between contact details and social icons */
+  }
+  
+  .social_icon {
+    width: 30px; /* Adjust the width of the social icons */
+    margin: 0 10px; /* Add some space between social icons */
+  }
+
+  .main_header_style h1 {
+    text-align: left; /* Align the text to the left */
+  }
