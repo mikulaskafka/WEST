@@ -2,9 +2,12 @@
 As part of my assignment at coding bootcamp, I've created a landing page for a fictional client an upscale WEST Restaurant &amp; Bar. 
 
 
-Design, develop and deploy the landing page.
+UTM Campaign Links:
 
-Create the 3 necessary links to the landing page with the appropriate UTM-parameters for each of the three platforms/channels.
+Instagram: https://olgashulezhko.github.io/WEST/?utm_source=instagram&utm_medium=post&utm_campaign=discount_coupon 
+Facebook: https://olgashulezhko.github.io/WEST/?utm_source=facebook&utm_medium=post&utm_campaign=discount_coupon
+Email: https://olgashulezhko.github.io/WEST/?utm_source=email&utm_medium=newsletter&utm_campaign=discount_coupon
+
 
 Draft the copies for the three platforms (since this is typically not the job of a marketing analytics professional, consider using chatGPT or harpa.ai).
 
