@@ -57,7 +57,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="form-group">
                  <input type="datetime-local" id="datetime" name="datetime" placeholder="Choose Date and Time" required>
                </div>
-               <button type="submit">Book Now</button>
+               <button type="button" id="book-now">Book Now</button>
            </form>
         </div>
         <div id="contact">
@@ -101,5 +101,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               });
           });
       });
+      
+document.addEventListener('DOMContentLoaded', function() {
+          const button = document.querySelector('#book-now');
+      
+          button.addEventListener('click', function() {
+              // Validate all required inputs
+              const inputs = document.querySelectorAll('input[required]');
+              let allFilled = true;
+              for (let input of inputs) {
+                  if (input.value === '') {
+                      allFilled = false;
+                      input.placeholder = 'This field is required';
+                  }
+              }
+      
+              if (allFilled) {
+                  const datetimeInput = document.querySelector('#datetime');
+                  const datetimeValue = datetimeInput.value;
+                  const formattedDateTime = formatDateTime(datetimeValue);
+      
+                  const newElement = document.createElement('div');
+                  newElement.setAttribute("id", "confirmation_message");
+                  newElement.textContent = `Your chosen date and time: ${formattedDateTime}`;
+                  
+                  const parentElement = button.parentElement;
+                  parentElement.replaceWith(newElement);
+              }
+          });
+      
+          function formatDateTime(dateTime) {
+              const months = ["January", "February", "March", "April", "May", "June",
+                              "July", "August", "September", "October", "November", "December"];
+              const nth = (day) => {
+                  if (day > 3 && day < 21) return 'th';
+                  switch (day % 10) {
+                      case 1:  return "st";
+                      case 2:  return "nd";
+                      case 3:  return "rd";
+                      default: return "th";
+                  }
+              };
+      
+              const date = new Date(dateTime);
+              const day = date.getDate();
+              const month = months[date.getMonth()];
+              const time = dateTime.split('T')[1];
+      
+              return `${month} ${day}${nth(day)} at ${time}`;
+          }
+      });
+      
   </script>
   </body>
